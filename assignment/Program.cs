@@ -84,6 +84,58 @@
             //Console.WriteLine($"The result of dividing 2 numbers is: {Maths.Divide(25, 5)}");
             #endregion
 
+            #region Project03
+
+
+            Console.Write("Please, enter your type: ");
+
+            string userType = Console.ReadLine()!.ToLower();
+
+            Console.WriteLine();
+
+            User user;
+
+            switch (userType) {
+
+                case "regular":
+                    user = new RegularUser();
+                    break;
+                case "premium":
+                    user = new PremiumUser();
+                    break;
+                case "guest":
+                    default:
+                    user = new GuestUser();
+                    break;
+            }
+
+            Console.Write("Enter product price: ");
+
+            decimal price = decimal.Parse(Console.ReadLine()!);
+
+            Console.WriteLine();
+
+            Console.Write("Enter quantity: ");
+
+            int quantity = int.Parse(Console.ReadLine()!);
+
+            Discount discount= user.GetDiscount();
+
+            decimal discountAmount = discount.CalculateDiscount(price, quantity);
+
+            decimal finalPrice = (price * quantity) - discountAmount;
+
+            Console.WriteLine($"\nUser: {user.Name} {userType.ToUpper()}");
+            Console.WriteLine($"Discount Type: {discount.Name}");
+            Console.WriteLine($"Discount Amount: ${discountAmount}");
+            Console.WriteLine($"Final Price: ${finalPrice}");
+
+
+
+
+
+            #endregion
+
         }
     }
 }
