@@ -73,6 +73,17 @@
 
             #endregion
 
+            #region Project02
+
+            //Console.WriteLine($"The result of adding 2 numbers is: {Maths.Add(3,5)}");
+
+            //Console.WriteLine($"The result of subtracting 2 numbers is: {Maths.Subtract(5, 2)}");
+
+            //Console.WriteLine($"The result of multiplying 2 numbers is: {Maths.Multiply(3, 5)}");
+
+            //Console.WriteLine($"The result of dividing 2 numbers is: {Maths.Divide(25, 5)}");
+            #endregion
+
         }
     }
 }
